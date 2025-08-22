@@ -1,5 +1,6 @@
 import React from "react";
 import FooterLogo from "../../assets/logo.png";
+import FooterImg from "../../assets/lahorebanner.jpg"; // Use any image you prefer
 import {
   FaFacebook,
   FaInstagram,
@@ -7,7 +8,6 @@ import {
   FaLocationArrow,
   FaMobileAlt,
 } from "react-icons/fa";
-// import NatureVid from "../../assets/video/footer.mp4";
 import { Link } from "react-router-dom";
 
 const FooterLinks = [
@@ -37,14 +37,11 @@ const Footer = () => {
   return (
     <>
       <div className="py-10 relative overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute right-0 top-0 h-full overflow-hidden w-full object-cover z-[-1]"
-        >
-          <source src={NatureVid} type="video/mp4" />
-        </video>
+        <img
+          src={FooterImg}
+          alt="Footer Banner"
+          className="absolute right-0 top-0 h-full w-full object-cover z-[-1]"
+        />
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 py-5 bg-white/10 backdrop-blur-sm rounded-t-xl">
             <div className="py-8 px-4 ">
@@ -88,13 +85,12 @@ const Footer = () => {
                   </h1>
                   <ul className="flex flex-col gap-3">
                     {FooterLinks.map((link) => (
-                      // --- FIX #1: Added key and corrected the 'to' prop ---
                       <li
                         key={link.name}
                         className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-sky-500 space-x-1 text-gray-700 dark:text-gray-200"
                       >
                         <Link
-                          to={link.link} // Changed from link.name.toUpperCase
+                          to={link.link}
                           onClick={() => window.scrollTo(0, 0)}
                         >
                           <span>⮚</span>
@@ -112,13 +108,12 @@ const Footer = () => {
                   </h1>
                   <ul className="flex flex-col gap-3">
                     {FooterLinks.map((link) => (
-                      // --- FIX #2: Added key prop ---
                       <li
                         key={link.name}
                         className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-sky-500 space-x-1 text-gray-700 dark:text-gray-200"
                       >
                         <Link
-                          to={link.link} // Corrected to use link.link
+                          to={link.link}
                           onClick={() => window.scrollTo(0, 0)}
                         >
                           <span>⮚</span>
@@ -136,13 +131,12 @@ const Footer = () => {
                   </h1>
                   <ul className="flex flex-col gap-3">
                     {FooterLinks.map((link) => (
-                      // --- FIX #3: Added key prop ---
                       <li
                         key={link.name}
                         className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-sky-500 space-x-1 text-gray-700 dark:text-gray-200"
                       >
                         <Link
-                          to={link.link} // Corrected to use link.link
+                          to={link.link}
                           onClick={() => window.scrollTo(0, 0)}
                         >
                           <span>⮚</span>

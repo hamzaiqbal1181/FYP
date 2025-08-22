@@ -1,5 +1,4 @@
 import React from "react";
-// import MainVid from "../assets/video/Main.mp4";
 import Hero from "../components/Hero/Hero";
 import Places from "../components/Places/Places";
 import BannerImg from "../components/BannerImg/BannerImg";
@@ -14,15 +13,11 @@ const Home = () => {
     <>
       <div>
         <div className="relative h-[700px]">
-          <video
-            autoPlay
-            loop
-            muted
-            className="absolute right-0 top-0 h-[700px]
-  w-full object-cover z-[-1]"
-          >
-            <source src={MainVid} type="video/mp4" />
-          </video>
+          <img
+            src={Poster}
+            alt="Hero Banner"
+            className="absolute right-0 top-0 h-[700px] w-full object-cover z-[-1]"
+          />
           <Hero />
         </div>
         <Places />
