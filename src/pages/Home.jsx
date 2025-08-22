@@ -3,10 +3,10 @@ import React from "react";
 import Hero from "../components/Hero/Hero";
 import Places from "../components/Places/Places";
 import BannerImg from "../components/BannerImg/BannerImg";
-import Poster from "../assets/Lahorebanner.jpg";
+import Poster from "../assets/lahorebanner.jpg";
 import Blogs from "./Blogs";
 import Banner from "../components/Banner/Banner";
-import Banner2 from "../assets/Banner2.png";
+import Banner2 from "../assets/banner2.png";
 import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
