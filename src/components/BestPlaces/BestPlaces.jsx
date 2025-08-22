@@ -3,7 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 // --- NEW: Import animation tools from Framer Motion ---
 import { motion, AnimatePresence } from "framer-motion";
-import Location from "../location/Location";
+import Location from "../Location/Location";
 
 // --- Keep all your image imports ---
 import ImgQilla from "../../assets/bestplaces/qilla.jpg";
