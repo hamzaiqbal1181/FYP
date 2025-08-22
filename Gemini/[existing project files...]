@@ -1,0 +1,40 @@
+import React, { useState } from 'react';
+import Message from './Message';
+import { fetchHistoricalPlaces } from '../api/geminiApi';
+
+const Chatbot = () => {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleSend = async () => {
+    if (!input) return;
+
+    const userMessage = { content: input, sender: 'user' };
+    setMessages((prev) => [...prev, userMessage]);
+
+    const response = await fetchHistoricalPlaces(input);
+    const botMessage = { content: response, sender: 'bot' };
+    setMessages((prev) => [...prev, botMessage]);
+
+    setInput('');
+  };
+
+  return (
+    <div className="chatbot">
+      <div className="messages">
+        {messages.map((msg, index) => (
+          <Message key={index} content={msg.content} sender={msg.sender} />
+        ))}
+      </div>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Ask about historical places in Lahore..."
+      />
+      <button onClick={handleSend}>Send</button>
+    </div>
+  );
+};
+
+export default Chatbot;
