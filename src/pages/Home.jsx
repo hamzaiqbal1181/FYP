@@ -1,5 +1,5 @@
 import React from "react";
-import MainVid from "../assets/video/Main.mp4";
+// import MainVid from "../assets/video/Main.mp4";
 import Hero from "../components/Hero/Hero";
 import Places from "../components/Places/Places";
 import BannerImg from "../components/BannerImg/BannerImg";
