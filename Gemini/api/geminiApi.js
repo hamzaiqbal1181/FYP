@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const GEMINI_API_URL = "https://api.gemini.com/v1/chat"; // 🔁 Replace with actual Gemini API endpoint
-const BACKEND_API_URL = "http://localhost:5000/api/users"; // Your Express backend
+// const BACKEND_API_URL = "http://localhost:5000/api/users"; // Your Express backend
+const BACKEND_API_URL = "https://fyp-b.onrender.com"; // Your Express backend
 
 export const fetchHistoricalPlaces = async (query, firebaseUid) => {
   try {
