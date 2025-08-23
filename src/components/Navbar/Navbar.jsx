@@ -187,6 +187,12 @@
 
 // File: src/components/Navbar/Navbar.jsx (Final Corrected Version)
 
+//
+
+// File: src/components/Navbar/Navbar.jsx (Final Corrected Version)
+
+// File: src/components/Navbar/Navbar.jsx (Final Corrected Version)
+
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
@@ -268,13 +274,14 @@ const Navbar = () => {
                 {NavbarLinks.map((item) => (
                   <li key={item.name} className="relative group">
                     {item.submenu ? (
+                      // Places Dropdown ka logic
                       <div
                         className="flex items-center gap-1"
                         ref={dropdownRef}
                       >
                         <NavLink
                           to={item.link}
-                          className="text-gray-700 hover:text-sky-600 font-medium pb-2"
+                          className="text-gray-700 hover:text-sky-600 font-medium px-3 py-2 rounded-md"
                         >
                           {item.name}
                         </NavLink>
@@ -289,26 +296,22 @@ const Navbar = () => {
                         </button>
                       </div>
                     ) : (
+                      // Doosre links ka logic
                       <NavLink
                         to={item.link}
                         className={({ isActive }) =>
-                          `text-gray-700 hover:text-sky-600 font-medium pb-2 relative
-                           ${isActive ? "text-sky-600" : ""}`
+                          `font-medium px-3 py-2 rounded-md transition-colors duration-300 ${
+                            isActive
+                              ? "bg-sky-100 text-sky-600"
+                              : "text-gray-700 hover:text-sky-600"
+                          }`
                         }
                       >
                         {item.name}
-                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-                        <NavLink
-                          to={item.link}
-                          className={({ isActive }) =>
-                            isActive
-                              ? "absolute bottom-0 left-0 w-full h-0.5 bg-sky-600"
-                              : ""
-                          }
-                        ></NavLink>
                       </NavLink>
                     )}
 
+                    {/* Dropdown Menu ka logic */}
                     <AnimatePresence>
                       {item.submenu && isDropdownOpen && (
                         <motion.ul
@@ -337,7 +340,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            {/* Auth Buttons and Mobile Menu (yeh hissa bilkul theek hai) */}
+            {/* Auth Buttons aur Mobile Menu (yeh hissa bilkul theek hai) */}
             <div className="flex items-center gap-4">
               {currentUser ? (
                 <div className="relative" ref={profileRef}>
