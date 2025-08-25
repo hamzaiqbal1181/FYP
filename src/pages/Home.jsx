@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import Places from "../components/Places/Places";
 import BannerImg from "../components/BannerImg/BannerImg";
 import Poster from "../assets/lahorebanner.jpg";
+import Posters from "../assets/fort.jpg";
 import Blogs from "./Blogs";
 import Banner from "../components/Banner/Banner";
 import Banner2 from "../assets/banner2.png";
@@ -14,7 +15,7 @@ const Home = () => {
       <div>
         <div className="relative h-[700px]">
           <img
-            src={Poster}
+            src={Posters}
             alt="Hero Banner"
             className="absolute right-0 top-0 h-[700px] w-full object-cover z-[-1]"
           />
