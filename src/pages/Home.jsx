@@ -12,7 +12,17 @@ import Testimonial from "../components/Testimonial/Testimonial";
 const Home = () => {
   return (
     <>
-      <div>
+      <div className="w-full">
+        {/* <div className="relative h-[350px] sm:h-[500px] md:h-[700px]">
+          <img
+            src={Posters}
+            alt="Hero Banner"
+            className="absolute right-0 top-0 h-full w-full object-cover z-[-1]"
+          />
+          <div className="relative z-10 flex items-center justify-center h-full px-2 sm:px-6">
+            <Hero />
+          </div>
+        </div> */}
         <div className="relative h-[700px]">
           <img
             src={Posters}
@@ -21,12 +31,24 @@ const Home = () => {
           />
           <Hero />
         </div>
-        <Places />
-        <BannerImg img={Poster} />
-        <Blogs />
-        <Banner />
-        <BannerImg img={Banner2} />
-        <Testimonial />
+        <div className="px-2 sm:px-6">
+          <Places />
+        </div>
+        <div className="px-2 sm:px-6">
+          <BannerImg img={Poster} />
+        </div>
+        <div className="px-2 sm:px-6">
+          <Blogs />
+        </div>
+        <div className="px-2 sm:px-6">
+          <Banner />
+        </div>
+        <div className="px-2 sm:px-6">
+          <BannerImg img={Banner2} />
+        </div>
+        <div className="px-2 sm:px-6">
+          <Testimonial />
+        </div>
       </div>
     </>
   );

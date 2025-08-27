@@ -37,14 +37,14 @@ const BlogsComp = () => {
   return (
     <>
       <div>
-        <div className="container pl-15">
-          <h1 className="my-8 ml-10 border-l-8 border-sky-700 py-2 text-3xl font-bold">
+        <div className="container mx-auto px-4">
+          <h1 className="my-8 border-l-8 border-sky-700 py-2 text-3xl font-bold pl-4">
             Our Latest Blogs
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
             {BlogsData.map((item, index) => (
-              <div className="mx-4">
-                <BlogCard key={index} {...item} />
+              <div key={index} className="w-full max-w-sm">
+                <BlogCard {...item} />
               </div>
             ))}
           </div>
