@@ -357,7 +357,7 @@ const AllPlacesData = [
       "Butt Karahi in Lahore is a famous dish known for its unique, rich flavor and spicy aroma. Originating from the bustling streets of Lahore, this dish features tender meat, usually chicken or mutton, cooked in a vast, deep karahi (wok) with a blend of spices. It is typically served with naan or rice, making it a popular choice among locals and visitors alike. The culinary experience at Butt Karahi combines delicious food with vibrant, sociable dining atmosphere.",
     type: "Food",
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.434525891075!2d74.32180602411168!3d31.56713003449774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b05a75eef91%3A0x7d69b7ea202a224!2sButt%20Karahi%20Tikka%20by%20Nadeem%20Butt!5e0!3m2!1sen!2s!4v1753107435242!5m2!1sen!2s",
+      "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d695722.9349705251!2d73.90932628778556!3d31.26970842394952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sButt%20Karahi%20all%20locations%20in%20lahore!5e0!3m2!1sen!2s!4v1756311031658!5m2!1sen!2s",
   },
   {
     id: 29,
