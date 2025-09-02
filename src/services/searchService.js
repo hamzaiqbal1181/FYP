@@ -1,6 +1,7 @@
 // File: src/services/searchService.js
 import axios from "axios";
-const API_URL = "http://localhost:5000/api/users";
+// const API_URL = "http://localhost:5000/api/users";
+const API_URL = "https://fyp-b.onrender.com/api/users";
 
 // Naya search record backend par save karta hai
 export const saveSearch = (searchData) => {

@@ -33,7 +33,8 @@ const SearchHistory = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:5000/api/users?uid=${firebaseUid}`
+          // `http://localhost:5000/api/users?uid=${firebaseUid}`
+          `https://fyp-b.onrender.com/api/users?uid=${firebaseUid}`
         );
         if (!res.ok) throw new Error("Failed to fetch search history");
         const data = await res.json();

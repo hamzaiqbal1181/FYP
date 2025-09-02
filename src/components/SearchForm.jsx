@@ -16,7 +16,8 @@ const SearchForm = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/search", {
+      // const res = await fetch("http://localhost:5000/api/search", {
+      const res = await fetch("https://fyp-b.onrender.com/api/search", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
