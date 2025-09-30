@@ -489,21 +489,29 @@ const Places = () => {
           <h1 className="my-8 ml-1 border-l-8 border-sky-700 py-2 pl-2 text-3xl font-bold">
             Places to Visit
           </h1>
-          <PlaceCategorySection
-            title="Historical Places"
-            places={historicalPlaces}
-            onLocationClick={handleLocationClick}
-          />
-          <PlaceCategorySection
-            title="Famous Shopping Places"
-            places={shoppingPlaces}
-            onLocationClick={handleLocationClick}
-          />
-          <PlaceCategorySection
-            title="Best Food Points"
-            places={foodPoints}
-            onLocationClick={handleLocationClick}
-          />
+
+          <div id="historical">
+            <PlaceCategorySection
+              title="Historical Places"
+              places={historicalPlaces}
+              onLocationClick={handleLocationClick}
+            />
+          </div>
+
+          <div id="shopping">
+            <PlaceCategorySection
+              title="Famous Shopping Places"
+              places={shoppingPlaces}
+              onLocationClick={handleLocationClick}
+            />
+          </div>
+          <div id="food">
+            <PlaceCategorySection
+              title="Best Food Points"
+              places={foodPoints}
+              onLocationClick={handleLocationClick}
+            />
+          </div>
         </div>
       </div>
 
