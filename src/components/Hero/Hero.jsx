@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -55,6 +56,7 @@ const Hero = () => {
   );
 };
 export default Hero;
+
 
 // import React, { useState, useEffect } from "react";
 // import AOS from "aos";
