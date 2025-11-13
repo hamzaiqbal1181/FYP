@@ -493,6 +493,7 @@ const Places = () => {
           <div id="historical">
             <PlaceCategorySection
               title="Historical Places"
+              
               places={historicalPlaces}
               onLocationClick={handleLocationClick}
             />
