@@ -1,6 +1,6 @@
 import React from "react";
 import Img1 from "../../assets/places/fort.jpg";
-import Img2 from "../../assets/places/tower.jpg";
+import Img2 from "../../assets/places/minarepakistan.jpg";
 import Img3 from "../../assets/places/mosque.jpg";
 import Img4 from "../../assets/places/dukaan.jpg";
 import Img5 from "../../assets/places/mandi.jpg";
