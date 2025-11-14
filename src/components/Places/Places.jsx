@@ -1156,6 +1156,24 @@ import Img33 from "../../assets/places/waris.jpg";
 import Img34 from "../../assets/places/yasir.jpg";
 import Img35 from "../../assets/places/kulfa.jpg";
 import Img36 from "../../assets/places/arif.jpg";
+import Img37 from "../../assets/places/qilla1.jpg";
+import Img38 from "../../assets/places/qilla2.jpg";
+import Img39 from "../../assets/places/minarpa.jpg";
+import Img40 from "../../assets/places/minarpak.jpg";
+import Img41 from "../../assets/places/road.jpg";
+import Img42 from "../../assets/places/safari.jpg";
+import Img43 from "../../assets/places/safarizoo.jpg";
+import Img44 from "../../assets/places/car.jpg";
+import Img45 from "../../assets/places/railcar.jpg";
+import Img46 from "../../assets/places/androon.jpg";
+import Img47 from "../../assets/places/saf2.jpg";
+import Img48 from "../../assets/places/mirror.jpg";
+import Img49 from "../../assets/places/train.jpg";
+import Img50 from "../../assets/places/grossery.jpg";
+import Img51 from "../../assets/places/outlet.jpg";
+import Img52 from "../../assets/places/muhala.jpg";
+import Img53 from "../../assets/places/galii.jpg";
+
 
 // --- COMPLETE DATA ARRAY WITH ALL 36 ITEMS AND MAP URLs ---
 const AllPlacesData = [
@@ -1163,7 +1181,7 @@ const AllPlacesData = [
   // --- Historical Places (12) ---
   {
     id: 1,
-    images: [Img1, Img5, Img6],
+    images: [Img1, Img37, Img38],
     title: "Lahore Fort",
     location: "Lahore",
     description:
@@ -1174,7 +1192,7 @@ const AllPlacesData = [
   },
   {
     id: 2,
-    images: [Img2, Img5, Img6],
+    images: [Img2, Img39, Img40],
     title: "Minar-e-Pakistan",
     location: "Lahore",
     description:
@@ -1185,7 +1203,7 @@ const AllPlacesData = [
   },
   {
     id: 3,
-    images: [Img3, Img2, Img6],
+    images: [Img3, Img43, Img6],
     title: "Badshahi Mosque",
     location: "Lahore",
     description:
@@ -1196,7 +1214,7 @@ const AllPlacesData = [
   },
   {
     id: 4,
-    images: [Img4, Img5, Img6],
+    images: [Img4, Img47, Img6],
     title: "Shalimar Garden",
     location: "Lahore",
     description:
@@ -1207,7 +1225,7 @@ const AllPlacesData = [
   },
   {
     id: 5,
-    images: [Img5, Img3, Img6],
+    images: [Img5, Img48, Img6],
     title: "Sheesh Mehal",
     location: "Lahore",
     description:
@@ -1218,7 +1236,7 @@ const AllPlacesData = [
   },
   {
     id: 6,
-    images: [Img6, Img11, Img12],
+    images: [Img6, Img11, Img37],
     title: "Wazir Khan Mosque",
     location: "Lahore",
     description:
@@ -1229,7 +1247,7 @@ const AllPlacesData = [
   },
   {
     id: 7,
-    images: [Img7, Img6, Img9],
+    images: [Img7, Img49, Img45],
     title: "Railway Station",
     location: "Lahore",
     description:
@@ -1240,7 +1258,7 @@ const AllPlacesData = [
   },
   {
     id: 8,
-    images: [Img8, Img5, Img2],
+    images: [Img8, Img47, Img43],
     title: "Lahore Zoo",
     location: "Lahore",
     description:
@@ -1251,7 +1269,7 @@ const AllPlacesData = [
   },
   {
     id: 9,
-    images: [Img9, Img5, Img3],
+    images: [Img9, Img5, Img52],
     title: "Shahi Hammam",
     location: "Lahore",
     description:
@@ -1262,7 +1280,7 @@ const AllPlacesData = [
   },
   {
     id: 10,
-    images: [Img10, Img5, Img6],
+    images: [Img10, Img41, Img44],
     title: "Dehli Gate",
     location: "Lahore",
     description:
@@ -1273,7 +1291,7 @@ const AllPlacesData = [
   },
   {
     id: 11,
-    images: [Img11, Img15, Img16],
+    images: [Img11, Img42, Img43],
     title: "Lahore Museum",
     location: "Lahore",
     description:
@@ -1284,7 +1302,7 @@ const AllPlacesData = [
   },
   {
     id: 12,
-    images: [Img12, Img15, Img26],
+    images: [Img12, Img42, Img43],
     title: "Bagh-e-Jinnah",
     location: "Lahore",
     description:
@@ -1297,7 +1315,7 @@ const AllPlacesData = [
   // --- Shopping Places (12) ---
   {
     id: 13,
-    images: [Img13, Img15, Img16], // Placeholder
+    images: [Img13, Img53, Img46], // Placeholder
     title: "Anarkali Bazaar",
     location: "Lahore",
     description:
@@ -1308,7 +1326,7 @@ const AllPlacesData = [
   },
   {
     id: 14,
-    images: [Img11, Img23, Img16], // Placeholder
+    images: [Img11, Img44, Img41], // Placeholder
     title: "Liberty Market",
     location: "Lahore",
     description:
@@ -1319,7 +1337,7 @@ const AllPlacesData = [
   },
   {
     id: 15,
-    images: [Img15, Img14, Img20],
+    images: [Img15, Img50, Img51],
     title: "Packages Mall",
     location: "Lahore",
     description:
@@ -1330,7 +1348,7 @@ const AllPlacesData = [
   },
   {
     id: 16,
-    images: [Img16, Img15, Img26],
+    images: [Img16, Img50, Img51],
     title: "Emporium Mall",
     location: "Lahore",
     description:
@@ -1341,7 +1359,7 @@ const AllPlacesData = [
   },
   {
     id: 17,
-    images: [Img17, Img16, Img19],
+    images: [Img17, Img51, Img50],
     title: "Fortress Square",
     location: "Lahore",
     description:
@@ -1352,7 +1370,7 @@ const AllPlacesData = [
   },
   {
     id: 18,
-    images: [Img18, Img13, Img14],
+    images: [Img18, Img53, Img46],
     title: "Ichhra Bazaar",
     location: "Lahore",
     description:
@@ -1363,7 +1381,7 @@ const AllPlacesData = [
   },
   {
     id: 19,
-    images: [Img19, Img15, Img16],
+    images: [Img19, Img46, Img53],
     title: "Shah Alam Market",
     location: "Lahore",
     description:
@@ -1374,7 +1392,7 @@ const AllPlacesData = [
   },
   {
     id: 20,
-    images: [Img21, Img19, Img16],
+    images: [Img21, Img50, Img51],
     title: "Pace Shopping Mall",
     location: "Lahore",
     description:
@@ -1385,7 +1403,7 @@ const AllPlacesData = [
   },
   {
     id: 21,
-    images: [Img21, Img17, Img16],
+    images: [Img50, Img50, Img51],
     title: "Xinhua Mall",
     location: "Lahore",
     description:
@@ -1396,7 +1414,7 @@ const AllPlacesData = [
   },
   {
     id: 22,
-    images: [Img22, Img25, Img36],
+    images: [Img53, Img44, Img22],
     title: "Hafeez Center",
     location: "Lahore",
     description:
@@ -1407,7 +1425,7 @@ const AllPlacesData = [
   },
   {
     id: 23,
-    images: [Img23, Img26, Img21],
+    images: [Img23, Img50, Img51],
     title: "Al-Fatah",
     location: "Lahore",
     description:
@@ -1418,7 +1436,7 @@ const AllPlacesData = [
   },
   {
     id: 24,
-    images: [Img24, Img29, Img30],
+    images: [Img24, Img53, Img50],
     title: "Y-Block Market",
     location: "Lahore",
     description:
@@ -1508,7 +1526,7 @@ const AllPlacesData = [
   },
   {
     id: 32,
-    images: [Img2, Img35, Img36],
+    images: [Img41, Img35, Img36],
     title: "Goga Naqeebia",
     location: "Lahore",
     description:
@@ -1541,7 +1559,7 @@ const AllPlacesData = [
   },
   {
     id: 35,
-    images: [Img5, Img29, Img34],
+    images: [Img52, Img29, Img34],
     title: "Benazir Kulfa",
     location: "Lahore",
     description:
