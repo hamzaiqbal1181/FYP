@@ -4,7 +4,7 @@ import Img2 from "../../assets/places/Tower.jpg";
 import Img3 from "../../assets/places/mosque.jpg";
 import Img4 from "../../assets/places/dukaan.jpg";
 import Img5 from "../../assets/places/mandi.jpg";
-import Img6 from "../../assets/places/darwaza.jpg";
+import Img6 from "../../assets/places/Darwaza.jpg";
 import BlogCard from "./BlogCard";
 const BlogsData = [
   {
