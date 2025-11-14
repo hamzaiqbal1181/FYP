@@ -8,7 +8,7 @@ import MapPopup from "./MapPopup";
 
 // --- ALL YOUR IMAGE IMPORTS ---
 import Img1 from "../../assets/places/fort.jpg";
-import Img2 from "../../assets/places/Minar-e-Pakistan.jpg";
+import Img2 from "../../assets/places/minarepakistan.jpg";
 import Img3 from "../../assets/places/mosque.jpg";
 import Img4 from "../../assets/places/shalimar.jpg";
 import Img5 from "../../assets/places/sheesh.jpg";
