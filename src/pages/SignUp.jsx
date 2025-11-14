@@ -137,7 +137,7 @@ import { auth } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
 // --- Naye icons import karein ---
 import { FaUserAlt, FaLock, FaAddressBook, FaEnvelope } from "react-icons/fa";
-import BgImage from "../assets/places/shalimar.jpg"; // Background image
+import BgImage from "../assets/places/fort.jpg"; // Background image
 
 // Domain validation logic waisi hi rahegi
 const allowedDomains = [
@@ -190,7 +190,8 @@ const SignUp = () => {
       alert(
         "Signup successful! A verification email has been sent to your inbox."
       );
-      navigate("/signin");
+      // navigate("/signin");
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }

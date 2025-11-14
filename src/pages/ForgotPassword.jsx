@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md"; // Email icon
 
 // --- BACKGROUND IMAGE ---
 // Using a different image for variety
-import BgImage from "../assets/places/mosque.jpg";
+import BgImage from "../assets/places/fort.jpg";
 
 const ForgotPassword = () => {
   // --- AAPKA PURANA LOGIC BILKUL WAISE HI HAI ---
