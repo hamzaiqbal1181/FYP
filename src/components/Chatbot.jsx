@@ -74,7 +74,7 @@ const Chatbot = () => {
   // --- AAPKA UI BILKUL WAISE HI RAHEGA ---
   return (
     <div
-      className="rounded-lg w-full max-w-3xl mx-auto"
+      className="rounded-lg w-full max-w-3xl mx-auto p-2 sm:p-4"
       style={{
         backgroundImage: `url(${PageBgImage})`,
         backgroundSize: "cover",
@@ -84,7 +84,7 @@ const Chatbot = () => {
       }}
     >
       <div
-        className="h-[24rem] overflow-y-auto mb-6 rounded p-4"
+        className="h-[24rem] overflow-y-auto mb-4 sm:mb-6 rounded p-3 sm:p-4"
         style={{
           background: "rgba(255,255,255,0.15)",
           backdropFilter: "blur(2px)",
@@ -98,7 +98,7 @@ const Chatbot = () => {
             }`}
           >
             <span
-              className={`inline-block px-3 py-2 rounded ${
+              className={`inline-block px-3 py-2 rounded max-w-[80%] ${
                 msg.from === "user"
                   ? "bg-blue-600 text-white"
                   : "bg-white/80 text-gray-800"
@@ -110,16 +110,16 @@ const Chatbot = () => {
         ))}
         {loading && <div className="text-white">Gemini is typing...</div>}
       </div>
-      <div className="flex p-2 gap-2">
+      <div className="flex flex-col sm:flex-row p-2 gap-2">
         <input
-          className="flex-1 rounded-l px-5 py-3 bg-white/90 text-gray-800 focus:outline-none"
+          className="flex-1 rounded-md sm:rounded-l-md px-4 py-3 bg-white/90 text-gray-800 focus:outline-none w-full"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           placeholder="Ask about Lahore's historical places..."
         />
         <button
-          className="bg-blue-600 px-6 py-3 rounded-r text-white hover:bg-blue-700"
+          className="bg-blue-600 px-6 py-3 rounded-md text-white hover:bg-blue-700 w-full sm:w-auto"
           onClick={sendMessage}
           disabled={loading}
         >
