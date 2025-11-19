@@ -68,7 +68,7 @@ const Footer = () => {
                     <FaInstagram className="text-3xl" />
                   </a> */}
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/travel.ore1947/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -88,7 +88,8 @@ const Footer = () => {
                     <FaLinkedin className="text-3xl" />
                   </a> */}
                   <a
-                    href="https://www.youtube.com/"
+                    // href="https://www.youtube.com/"
+                    href="https://www.youtube.com/@Hamza1181-l7o"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
