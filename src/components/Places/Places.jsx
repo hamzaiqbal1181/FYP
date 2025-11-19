@@ -1174,7 +1174,6 @@ import Img51 from "../../assets/places/outlet.jpg";
 import Img52 from "../../assets/places/muhala.jpg";
 import Img53 from "../../assets/places/galii.jpg";
 
-
 // --- COMPLETE DATA ARRAY WITH ALL 36 ITEMS AND MAP URLs ---
 const AllPlacesData = [
   // ... (Your AllPlacesData array remains unchanged as it still uses ImgX for individual place cards)
@@ -1615,19 +1614,53 @@ const Places = () => {
 
   return (
     <>
-      <div className="bg-gray-50 py-10">
+      <div className="bg-gray-50 pb-20">
         <div className="container mx-auto">
-          <h1 className="my-8 ml-1 border-l-8 border-sky-700 py-2 pl-2 text-3xl font-bold">
+          {/* <h1 className="my-8 ml-1 border-l-8 border-sky-700 py-2 pl-2 text-3xl font-bold">
+            Places to Visit
+          </h1> */}
+          {/* option 1 */}
+          <h1
+            className="ml-1 py-3 pl-3 text-4xl font-extrabold text-gray-800 tracking-wide md:text-5xl lg:text-6xl"
+            style={{
+              backgroundImage: "linear-gradient(to right, #E0F7FA, #E8F5E9)", // Light Cyan to Light Green
+              // Or you could use Tailwind classes if configured: bg-gradient-to-r from-cyan-50 to-emerald-50
+              borderLeft: "8px solid", // Keep your left border style
+              borderImage: "linear-gradient(to bottom, #4F46E5, #0EA5E9) 1", // Gradient for the left border
+              paddingLeft: "1rem", // Ensure enough padding for the border
+              borderRadius: "0 0.5rem 0.5rem 0", // Rounded right edges for a modern feel
+            }}
+          >
             Places to Visit
           </h1>
 
+          {/* option 2 */}
+          {/* <h1
+            className="relative my-8 ml-1 py-3 pl-3 text-4xl font-extrabold text-gray-800 tracking-wide md:text-5xl lg:text-6xl"
+            style={{
+              // This creates a gradient border effect.
+              // The `linear-gradient` is applied as a background,
+              // and then `mask-image` is used to create the border.
+              background:
+                "linear-gradient(to right, #4F46E5, #0EA5E9, #10B981) border-box", // Indigo, Sky, Emerald
+              WebkitMask:
+                "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+              border: "1px solid transparent", // Fallback/base border
+              borderRadius: "0.25rem", // Match your other rounded elements if desired
+            }}
+          >
+            Places to Visit
+          </h1> */}
+
           <div>
-            <p className="my-8 ml-1 py-2 pl-2 text-2xl ">
+            {/* <p className="my-8 ml-1 py-2 pl-2 text-2xl ">
               Step back in time and explore ancient forts, majestic mosques, and
               captivating gardens that tell tales of empires past. Each
               historical site offers a unique glimpse into the rich heritage and
               architectural brilliance of Lahore.
-            </p>
+            </p> */}
           </div>
 
           <div id="historical">

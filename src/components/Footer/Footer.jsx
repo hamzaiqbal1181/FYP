@@ -4,7 +4,7 @@ import FooterImg from "../../assets/lahorebanner.jpg"; // Use any image you pref
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
+  FaYoutube,
   FaLocationArrow,
   FaMobileAlt,
 } from "react-icons/fa";
@@ -88,11 +88,11 @@ const Footer = () => {
                     <FaLinkedin className="text-3xl" />
                   </a> */}
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.youtube.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaLinkedin className="text-3xl" />
+                    <FaYoutube className="text-3xl" />
                   </a>
                 </div>
               </div>

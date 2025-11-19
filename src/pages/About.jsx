@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // --- IMPORT YOUR LOCAL IMAGES ---
 // These images are imported from your project's assets folder.
-import HeroImage from "../assets/places/wall.jpg"; // Using Lahore Fort for the hero section
+import HeroImage from "../assets/places/fort.jpg"; // Using Lahore Fort for the hero section
 import MissionImg from "../assets/places/college.jpg"; // Using Shalimar Garden for the mission section
 import ProfilePic from "../assets/places/gumbad.jpg"; // Your personal profile picture
 
@@ -29,7 +29,7 @@ const About = () => {
           backgroundImage: `url(${heroBgImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-opacity-50"></div>
         <div className="relative text-center z-10 px-4">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Our Story
@@ -112,7 +112,7 @@ const About = () => {
         <section className="bg-white py-16 px-8 rounded-xl shadow-xl mb-20">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-black mb-4">
-              Meet the Creator
+              Meet the Creators
             </h2>
             <img
               src={profileImage} // <-- This now uses your local image
@@ -120,16 +120,18 @@ const About = () => {
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-black"
             />
             <h3 className="text-2xl font-semibold">
-              Hamza <span className="text-gray-500">(Your Last Name)</span>
+              Minhajians
+              
+               {/* <span className="text-gray-500">(Your Last Name)</span> */}
             </h3>{" "}
             {/* <-- REPLACE WITH YOUR NAME */}
-            <p className="text-lg text-gray-600 mb-4">
+            {/* <p className="text-lg text-gray-600 mb-4">
               Lead Developer & Visionary
-            </p>
+            </p> */}
             <p className="max-w-2xl mx-auto mb-6">
-              "As a final year student, I developed this platform to solve a
-              real-world problem while showcasing my skills in modern web
-              development. My goal is to continue expanding this project to help
+              "As final year students, we developed this platform to solve a
+              real-world problem while showcasing our skills in modern web
+              development. Our goal is to continue expanding this project to help
               digitize Pakistan's entire tourism industry."
             </p>
             <div className="flex justify-center gap-6">

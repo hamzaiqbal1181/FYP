@@ -1,6 +1,8 @@
 import React from "react";
 import TravelImg from "../../assets/travelbox.png";
-import { MdFlight, MdOutlineLocalHotel } from "react-icons/md";
+// import { MdFlight } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
+import { GiMultiDirections } from "react-icons/gi";
 import { IoIosWifi } from "react-icons/io";
 import { IoFastFoodSharp } from "react-icons/io5";
 
@@ -39,12 +41,12 @@ const Banner = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="flex items-center gap-3">
-                  <MdFlight className="text-3xl h-10 w-10 shadow-sm p-2 rounded-full bg-violet-100 dark:bg-violet-400" />
-                  <p className="text-base font-medium">Flight</p>
+                  <GiMultiDirections className="text-3xl h-10 w-10 shadow-sm p-2 rounded-full bg-violet-100 dark:bg-violet-400" />
+                  <p className="text-base font-medium">Direction</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MdOutlineLocalHotel className="text-3xl h-10 w-10 shadow-sm p-2 rounded-full bg-orange-100 dark:bg-orange-400" />
-                  <p className="text-base font-medium">Hotel</p>
+                  <FaShoppingCart className="text-3xl h-10 w-10 shadow-sm p-2 rounded-full bg-orange-100 dark:bg-orange-400" />
+                  <p className="text-base font-medium">Shop</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <IoIosWifi className="text-3xl h-10 w-10 shadow-sm p-2 rounded-full bg-violet-100 dark:bg-violet-400" />
