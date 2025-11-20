@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { IoLocationSharp } from "react-icons/io5";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaHeart } from "react-icons/fa";
 // --- NEW: Import animation tools from Framer Motion ---
 import { motion, AnimatePresence } from "framer-motion";
 import Location from "../Location/Location";
+import ReviewModal from "../BestPlaces/ReviewModal";
 
 // --- Keep all your image imports ---
 import ImgQilla from "../../assets/bestplaces/qilla.jpg";
@@ -134,38 +135,159 @@ const topRatedPlaces = [
   },
 ];
 
+// const BestPlaces = () => {
+//   // --- NEW: State to track which place is currently active/featured ---
+//   const [activePlace, setActivePlace] = useState(topRatedPlaces[0]);
+
+//   return (
+//     <div className="bg-gray-100 text-black py-20">
+//       <div className="container mx-auto px-4">
+//         <div className="text-center mb-12">
+//           <h2 className="text-4xl font-extrabold text-gray-800">
+//             Top Rated Destinations
+//           </h2>
+//           <p className="text-gray-500 mt-2">
+//             Click on a place to see more details.
+//           </p>
+//         </div>
+
+//         {/* --- NEW: Main gallery layout --- */}
+//         <div className="grid lg:grid-cols-2 gap-12 items-start">
+//           {/* Left Column: Featured Display */}
+//           <div className="flex flex-col gap-4">
+//             <AnimatePresence mode="wait">
+//               <motion.img
+//                 key={activePlace.id} // The key tells Framer Motion to re-animate when it changes
+//                 src={activePlace.img}
+//                 alt={activePlace.title}
+//                 className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+//                 initial={{ opacity: 0, x: -50 }}
+//                 animate={{ opacity: 1, x: 0 }}
+//                 exit={{ opacity: 0, x: 50 }}
+//                 transition={{ duration: 0.5, ease: "easeInOut" }}
+//               />
+//             </AnimatePresence>
+//             <motion.div
+//               initial={{ opacity: 0 }}
+//               animate={{ opacity: 1 }}
+//               transition={{ delay: 0.3 }}
+//             >
+//               <h3 className="text-3xl font-bold">{activePlace.title}</h3>
+//               <div className="flex items-center gap-4 text-gray-600 mt-2">
+//                 <div className="flex items-center gap-1">
+//                   <IoLocationSharp className="text-sky-600" />
+//                   <span>{activePlace.location}</span>
+//                 </div>
+//                 {/* <div className="flex items-center gap-1">
+//                   <FaStar className="text-yellow-500" />
+//                   <span className="font-bold">{activePlace.rating}</span>
+//                 </div> */}
+//               </div>
+//               <p className="mt-4 text-gray-700 leading-relaxed">
+//                 {activePlace.description}
+//               </p>
+//             </motion.div>
+//           </div>
+
+//           {/* Right Column: Thumbnail List */}
+//           <div className="flex flex-col gap-4 max-h-[600px] overflow-y-auto pr-2">
+//             {topRatedPlaces.map((place) => (
+//               <motion.div
+//                 key={place.id}
+//                 onClick={() => setActivePlace(place)} // --- NEW: Click handler to change the active place ---
+//                 className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all duration-300 border-2
+//                   ${
+//                     activePlace.id === place.id
+//                       ? "bg-white shadow-lg border-sky-500" // Style for the active thumbnail
+//                       : "bg-gray-200 hover:bg-white border-transparent" // Style for inactive thumbnails
+//                   }`}
+//                 whileHover={{ scale: 1.03 }}
+//               >
+//                 <img
+//                   src={place.img}
+//                   alt={place.title}
+//                   className="w-20 h-20 object-cover rounded-lg"
+//                 />
+//                 <div>
+//                   <h4 className="font-bold text-lg">{place.title}</h4>
+//                   <p className="text-sm text-gray-600">{place.location}</p>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//         <div className="mt-20">
+//           <Location place={activePlace} />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BestPlaces;
+
 const BestPlaces = () => {
-  // --- NEW: State to track which place is currently active/featured ---
   const [activePlace, setActivePlace] = useState(topRatedPlaces[0]);
 
+  // --- NEW: State for Review Modal ---
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
+
   return (
-    <div className="bg-gray-100 text-black py-20">
+    <div className="bg-gray-100 text-black py-20 relative">
+      {/* --- NEW: Render Modal --- */}
+      <ReviewModal
+        isOpen={isReviewOpen}
+        onClose={() => setIsReviewOpen(false)}
+        place={activePlace}
+      />
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-800">
             Top Rated Destinations
           </h2>
           <p className="text-gray-500 mt-2">
-            Click on a place to see more details.
+            Click the <FaHeart className="inline text-red-500" /> to see
+            reviews.
           </p>
         </div>
 
-        {/* --- NEW: Main gallery layout --- */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column: Featured Display */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 relative group">
             <AnimatePresence mode="wait">
-              <motion.img
-                key={activePlace.id} // The key tells Framer Motion to re-animate when it changes
-                src={activePlace.img}
-                alt={activePlace.title}
-                className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+              <motion.div
+                key={activePlace.id}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-              />
+                className="relative rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <img
+                  src={activePlace.img}
+                  alt={activePlace.title}
+                  className="w-full h-[400px] object-cover"
+                />
+
+                {/* --- NEW: Heart Icon Overlay --- */}
+                <button
+                  onClick={() => setIsReviewOpen(true)}
+                  className="absolute top-4 right-4 bg-white/80 hover:bg-white text-red-500 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 backdrop-blur-sm"
+                  title="View & Add Reviews"
+                >
+                  <FaHeart size={24} />
+                </button>
+
+                {/* Optional: Overlay Text hint */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-sm text-center">
+                    Click the heart to read reviews
+                  </p>
+                </div>
+              </motion.div>
             </AnimatePresence>
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -177,10 +299,16 @@ const BestPlaces = () => {
                   <IoLocationSharp className="text-sky-600" />
                   <span>{activePlace.location}</span>
                 </div>
-                {/* <div className="flex items-center gap-1">
+                {/* Added click handler here too for better UX */}
+                <div
+                  className="flex items-center gap-1 cursor-pointer hover:text-yellow-600"
+                  onClick={() => setIsReviewOpen(true)}
+                >
                   <FaStar className="text-yellow-500" />
-                  <span className="font-bold">{activePlace.rating}</span>
-                </div> */}
+                  <span className="font-bold underline decoration-dotted">
+                    See Reviews
+                  </span>
+                </div>
               </div>
               <p className="mt-4 text-gray-700 leading-relaxed">
                 {activePlace.description}
@@ -189,32 +317,35 @@ const BestPlaces = () => {
           </div>
 
           {/* Right Column: Thumbnail List */}
-          <div className="flex flex-col gap-4 max-h-[600px] overflow-y-auto pr-2">
+          <div className="flex flex-col gap-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
             {topRatedPlaces.map((place) => (
               <motion.div
                 key={place.id}
-                onClick={() => setActivePlace(place)} // --- NEW: Click handler to change the active place ---
+                onClick={() => setActivePlace(place)}
                 className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all duration-300 border-2
                   ${
                     activePlace.id === place.id
-                      ? "bg-white shadow-lg border-sky-500" // Style for the active thumbnail
-                      : "bg-gray-200 hover:bg-white border-transparent" // Style for inactive thumbnails
+                      ? "bg-white shadow-lg border-sky-500"
+                      : "bg-gray-200 hover:bg-white border-transparent"
                   }`}
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ scale: 1.02 }}
               >
                 <img
                   src={place.img}
                   alt={place.title}
-                  className="w-20 h-20 object-cover rounded-lg"
+                  className="w-20 h-20 object-cover rounded-lg shrink-0"
                 />
                 <div>
-                  <h4 className="font-bold text-lg">{place.title}</h4>
+                  <h4 className="font-bold text-lg line-clamp-1">
+                    {place.title}
+                  </h4>
                   <p className="text-sm text-gray-600">{place.location}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+
         <div className="mt-20">
           <Location place={activePlace} />
         </div>
